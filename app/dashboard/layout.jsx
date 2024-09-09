@@ -8,7 +8,7 @@ const DashBoardLaoyout = ({children}) => {
       <div className='mx-5 md:mx-20 lg:mx-32'>
       {children}
       </div>
-     
+    
     </div>
   )
 }
