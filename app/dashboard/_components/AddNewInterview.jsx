@@ -27,7 +27,7 @@ const AddNewInterview = () => {
   const [jobPosition, setJobPosition] = useState();
   const [jobDescription, setjobDescription] = useState();
   const [jobexperience, setjobexperience] = useState();
-  const [loading, setloading] = useState(false)
+  const [loading, setloading] = useState(false);
   const { user } = useUser();
   const [JsonResponse, setJsonResponse] = useState([])
   const onSubmit = async (e) => {
