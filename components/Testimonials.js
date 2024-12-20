@@ -14,7 +14,7 @@ export default function Testimonials() {
     <section id="testimonials" ref={ref} className={`py-20 relative overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="absolute inset-0 bg-gradient-to-br from-yellow-200 via-pink-200 to-purple-200 opacity-50"></div>
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text">What Our Users Say</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-center  text-gray-800 mb-12 gradient-text">What Our Users Say</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div key={index} className={`${testimonial.color} p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1`}>
