@@ -1,11 +1,33 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+'use client'
+
+import { useState, useEffect } from 'react'
+import Header from '@/components/Header'
+import Hero from '@/components/Hero'
+import Features from '@/components/Features'
+import Testimonials from '@/components/Testimonials'
+import Pricing from '@/components/Pricing'
+import Contact from '@/components/Contact'
+import Footer from '@/components/Footer'
+import BackgroundDecoration from '@/components/BackgroundDec'
 
 export default function Home() {
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  useEffect(() => {
+    setIsLoaded(true)
+  }, [])
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-     <h2>hello anirban here</h2>
-     <Button className='bg-blue-800'  >now anir is here</Button>
-    </div>
-  );
+    <main className={`min-h-screen bg-gradient-to-br from-purple-50 to-white ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500 overflow-hidden`}>
+      <BackgroundDecoration />
+      <Header />
+      <Hero />
+      <Features />
+      <Testimonials />
+      <Pricing />
+      <Contact />
+      <Footer />
+    </main>
+  )
 }
+
